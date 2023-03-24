@@ -1,0 +1,18 @@
+.cl1{
+    background-color: blue;
+}
+.cl2{
+    background-color: rgb(221, 235, 99);
+}
+.cl3{
+    background-color: rgb(163, 163, 240);
+}
+.ty{
+    background-color: rgb(0, 0, 75);
+}
+.row{
+    border: 1px solid blue;
+}
+.container{
+    border: 1px solid rgb(113, 113, 126);
+}

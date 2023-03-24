@@ -1,0 +1,977 @@
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .toggle-button {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    
+  }
+  #menu-toggle{
+display: none;
+  }
+  
+  .toggle-button span {
+    display: block;
+  
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+  }
+ 
+  
+  #menu-toggle:checked + .toggle-button span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  #menu-toggle:checked + .toggle-button span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-toggle:checked + .toggle-button span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 0;
+      z-index: 1;
+      background-color:blue;
+     
+
+    }
+
+    
+    .menu li {
+      text-align: center;
+      width: 100%;
+    }
+    
+    .menu li a {
+      padding: 10px;
+      border-bottom: 1px solid #fff;
+    }
+    
+    #menu-toggle:checked ~ .menu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .toggle-button {
+      display: block;
+    }
+  }
+  /* navbar end */
+  .landingpage{
+    display: flex;
+    border: 1px solid red;
+    position: relative;
+    /* min-height: 90vh; */
+
+    /* height: 80vh; */
+   
+  }
+.landingpage .leftpage{
+  /* width: 40%; */
+  /* border: 1px solid black; */
+  position: relative;
+  overflow: hidden;
+  background-image: url(file:///C:/Users/umasankar/Desktop/web/img/12.png);
+  background-repeat: no-repeat;
+  box-shadow: 100px 0px 100px 10px rgb(255, 255, 255);
+}
+/* .landingpage .leftpage .lftc{
+position: absolute;
+
+padding: 100px 0 0 10px;
+
+} */
+.leftcontent1{
+  /* border: 1px solid blue; */
+  padding: 10% 0 10% 5%;
+  margin-top: 20%;
+  background-color: rgba(252, 252, 252, 0.185);
+  border-radius: 15px;
+  box-shadow: 100px 0px 100px 10px rgb(249, 255, 252) inset;
+  
+}
+
+.landingpage .leftpage h3{
+  padding-top: 20px;
+  color: #ff9494;
+}
+.landingpage .leftpage h1{
+  padding: 20px 0;
+}
+.landingpage .leftpage h1 span{
+  color: #2078dd;
+}
+.landingpage .leftpage p span{
+  color: #ffc72f;
+  
+}
+
+/* .landingpage .leftpage .lftc:not(.active){
+  top: 0%;
+  right: 200%;
+  opacity: 1;
+} */
+.landingpage .leftpage p{
+  padding-bottom: 20px;
+  /* line-height: 2rem; */
+}
+.landingpage .leftpage.leftbtn{
+/* width: 100%; */
+/* border: 1px solid rgb(1, 22, 138); */
+/* justify-content: space-between; */
+/* padding-top: 10px; */
+display: flex;
+}
+.landingpage .leftpage .leftbtn button{
+width: 120px; 
+height: 40px;
+margin-right: 20px;
+border: none;
+background-color: blue;
+border-radius: 20px;
+font-size: 14px;
+color: white;
+}
+.landingpage .leftpage .leftbtn button:hover{
+  background-color: rgb(208, 253, 123);
+}
+/* media query for landing page left  */
+@media screen and (max-width: 768px){
+  .landingpage{
+    display: block;
+    width: 100%; 
+
+  }
+  .landingpage .leftpage{
+  border: 1px solid red;
+  width: auto;
+  
+   
+
+  }
+  .landingpage .leftpage .leftcontent1{
+    margin-top: 0%;
+    padding-top: 0px;
+  }
+  .landingpage .leftpage .leftcontent1 button{
+    
+  justify-content: space-between;
+  /* border: 4px solid black; */
+  /* display: block; */
+  margin: 5px;
+  }
+  .landingpage .rightpage{
+    /* width: auto; */
+    /* border: 1px solid blue; */
+    display: block;
+    
+    /* position: relative;
+    
+    
+    width: 100%;
+    width: 100vh; */
+    /* width: 100%; */
+    /* display: inline-block; */
+    /* width: 100vh; */
+    height: 50vh;
+    /* position: absolute; */
+    border:2px solid rgb(71, 32, 32);
+  }
+  /* .landingpage .rightpage .slide-container{
+    width: auto;
+    border: 3px solid black;
+    width: 100%;
+    width: 60vh;   
+    object-fit: cover;
+    position: relative;
+  } */
+  /* .slide-container .slides img{
+    width: 100%;
+  object-fit: cover;
+  width: 100%;
+  } */
+  .landingpage .rightpage .slide-container .dotcontainer .dot{
+    /* margin: 0; */
+    display: none;
+    /* width: 0; */ 
+  }
+  .landingpage .rightpage .slide-container .slides img{
+    box-shadow: none;
+  }
+
+
+}
+
+
+
+
+
+/* landing right page  */
+.landingpage .rightpage{
+  width: 100%;
+  /* border: 1px soid blue; */
+  /* width: 100%; */
+
+}
+.landingpage .rightpage .slide-container{
+  position: relative;
+  
+}
+.slide-container .slides{
+  width: 100%;
+  height: 100%;
+  padding: calc(100% -40px);
+  position: relative;
+  overflow: hidden;
+ 
+
+}
+.slide-container .slides img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 30px 0px 100px 100px rgb(255, 255, 255);
+}
+.slide-container .slides img:not(.active){
+  top: 0;
+  left: -100%;
+}
+span.next,span.prev{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background-color: rgb(56, 47, 182); */
+  padding: 14px;
+  color: #24b4d8;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.5s;  
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+span.next{
+  right: 20px;
+}
+span.prev{
+  left: 20px;
+}
+.dotcontainer{
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dotcontainer .dot{
+  width: 15px;
+  height: 15px;
+ margin: 0px 2px;
+ border: 3px solid rgb(177, 177, 177);
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6 ease; 
+ cursor: pointer;
+}
+.dotcontainer .active{
+  background-color: rgb(255, 255, 255);
+  transition:all; 
+}
+
+@keyframes next1{
+  from{
+    left:0%;
+  }
+  to{
+    left:-100%;
+  }
+  
+}
+@keyframes next2{
+  from{
+    left:100%;
+  }
+  to{
+    left:0%;
+  }
+  
+}
+
+@keyframes prev1{
+  from{
+    left:0%;
+  }
+  to{
+    left:100%;
+  }
+  
+}
+@keyframes prev2{
+  from{
+    left:-100%;
+  }
+  to{
+    left:0%;
+  }
+  
+}
+/* @keyframes cnt1{
+  from{
+    right: 0;
+  }
+  to{
+    top: 200%;
+
+  }
+  
+} */
+/* @keyframes cnt2{
+  from{
+    top:-200%;
+    
+  }
+  to{
+    right: 00%;
+  }
+  
+} */
+/* landingpage :end */
+/* 
+.recentblogs{
+  border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(130, 238, 206, 0.788);
+}
+
+.recentblogs .recentContent .card .card-content .recentImage{
+ height: 140px;
+ width: 140px;
+ border-radius: 50%;
+ padding: 3px;
+ background-color: rgb(64, 206, 147);
+}
+.recentblogs .recentContent .card .card-content .recentImage img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+ }
+ .recentblogs .recentContent .card{
+  background-color: rgb(156, 72, 72);
+  border-radius: 20px;
+  position: relative;
+  margin: 20px 0;
+  
+  width: 95%; */
+  /* width: 200px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+  
+ /* }
+ @media screen and (max-width: 768px) {
+  .recentblogs{
+    display: block;
+    height: auto;
+   
+  }
+  .recentblogs .recentContent{
+    align-items: center;
+    display: flex;
+    justify-content: center; */
+    /* margin-left: 10px; */
+    /* margin-top: 30px;
+   
+    
+  }
+  
+}
+
+
+ .recentblogs .recentContent .card::before{
+  content: "";
+  position: absolute;
+  height: 45%;
+  width: 100%;
+border-radius: 20px 20px 0 0;
+  background-color: rgba(70, 5, 5, 0.781);
+ }
+ .recentblogs .recentContent .card .card-content{
+  display: flex;
+  flex-direction: column; */
+  /* border: 1px solid red; */
+  /* align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+ } */
+ /* .recentblogs .recentContent .card .card-content .media-icons{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+ flex-direction: column;
+ } */
+ /* .recentblogs .recentContent .card .card-content .media-icons i{
+margin-top: 10px;
+color: white;
+opacity: 0.6;
+transition: all 0.3s ease;
+ }
+ .recentblogs .recentContent .card .card-content .media-icons i:hover{
+opacity: 1;
+ }
+ .recentblogs .recentContent .card .name-profession{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 10px;
+color: red;
+}
+
+.recentblogs .recentContent .card .name-profession .Pfname{
+font-size: 20px;
+font-weight: 600;
+  }
+  .recentblogs .recentContent .card .name-profession .profession{
+  font-size: 15px;
+  font-weight: 500;
+
+  }     */
+    
+/*   
+.recentblogs .recentContent .card .ratings{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.recentblogs .recentContent .card .ratings i{
+  font-size: 18px;
+  margin: 0 2px;
+  color: #fff;
+
+}
+.recentblogs .recentContent .card .Cbutton{
+display: flex;
+justify-content: space-around;
+width: 100%;
+margin-top: 20px;
+}
+
+.recentblogs .recentContent .card .Cbutton button{
+  background-color: blue;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 8px  22px;
+  cursor: pointer;
+  border-radius: 20px;
+  }
+  
+.recentblogs .recentContent .card .Cbutton button:hover{
+  background-color: rgb(107, 59, 59);
+  columns: blue;
+} */
+
+/* three card start */
+.cards .cardicon{
+  /* width: 30px; */
+  /* height: 80px; */
+  border: 1px solid rgb(255, 246, 166);
+  /* align-items: right; */
+  /* justify-content: ; */
+  border-radius: 10px;
+  background-color: #fca3a3;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.cards .cardicon img{
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border: 1px solid rgb(175, 54, 17);
+  background-color: rgb(241, 65, 188);
+  border-radius: 50%;
+  margin: 5px;
+  transition: all 0.5s;
+}
+.cards .cardicon img:hover{
+  background-color: blue;
+  transform: rotate(360deg);
+}
+.cards .cardimg{
+  
+  border: 1px solid rgb(0, 187, 187);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 2px;
+  margin: 10px;
+
+}
+.cards .cardimg img{
+  border: 1px solid rgb(16, 187, 0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+ 
+
+}
+
+.cards{
+  /* border: 1px solid black; */
+  position: relative;
+  background-color: #b4ffe2;
+  /* top: 50%; */
+  background-color: rgb(114, 221, 185);
+  padding: 20px;
+  
+}
+.cards h1{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.cards .threecard{
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* border: 2px solid blue; */
+  /* padding: 10px; */
+  /* margin: 10px; */
+  background-color: rgb(114, 221, 185);
+
+}
+
+.cards .threecard .card1, .card2, .card3{
+  width: 30%;
+  border: 2px solid rgb(230, 230, 255);
+  background-color: rgb(208, 255, 239);
+  /* justify-content: center; */
+  /* align-items: center; */
+
+
+  
+text-align: center;
+border-radius: 10px;
+}
+
+
+.cards .threecard .cardbutton{
+display: flex;
+justify-content: space-evenly;
+padding: 10px;
+}
+.cards .threecard .cardbutton button{
+  border: none;
+  background-color: blue;
+  background-color: #7de1ff;
+  padding: 10px;
+  color: white;
+  border-radius: 18px;
+
+}
+.cards .threecard .cardbutton button:hover{
+  background-color: rgb(151, 87, 87);
+}
+@media screen and (max-width: 768px){
+  .cards .cardicon{
+    flex-direction: row;
+  }
+  .cards .threecard .cardbutton{
+    display: block;
+  }
+  .cards .threecard .cardbutton button{
+    margin-top: 5px;
+  }
+  .cards .threecard{
+    display: block;
+    /* width: 100%; */
+    border: 1px solid red;
+  }
+  .cards .threecard .card1, .card2, .card3{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .cards h1{
+    font-size: 18px;
+  }
+
+}
+/* three card end? */
+
+.marina{
+  /* border: 1px solid red; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: rgb(138, 177, 184);
+}
+.marina .marinaleft{
+  width: 45%;
+}
+.marina .marinaleft img{
+  width: 100%;
+  object-fit: cover;
+  padding: 10px 0 10px 10px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+}
+.marina .marinaright{
+  width: 55%;
+  /* border: 2px solid darkred; */
+  background-color: #defcb6d8;
+  margin: 10px 10 10px 0px;
+  padding: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-image: url('file:///C:/Users/umasankar/Desktop/web/img/16.png');
+  box-shadow: -10px -10px 100px 50px rgb(149, 224, 253);
+}
+.marina .marinaright .marinabutton{
+  align-items: center;
+  /* border: 1px solid red; */
+  /* width: 100px; */
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+
+}
+.marina .marinaright button{
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  background-color: #9c9c7e;
+   cursor: pointer;
+}
+.marina .marinaright button:hover{
+  background-color: blueviolet;
+
+}
+.marina .marinaright p{
+  padding-top: 10px;
+}
+.marina .marinaright h1{
+padding-top: 10px;
+}
+@media screen and (max-width: 768px){
+  .marina{
+    display: block;
+  }
+  .marina .marinaleft{
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .marina .marinaleft img{
+
+    padding:10px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .marina .marinaright{
+    width: 100%;
+  }
+
+}
+/* marina end? */
+.multipage{
+  /* border: 1px solid red; */
+  margin: 10px;
+}
+.multipage .multipagetop{
+  display: flex;
+  border-bottom: 1px solid blue;
+  margin-bottom: 10px;
+}
+
+.multipage .multipagebottom{
+  display: flex;
+  border-top: 1px solid blue;
+
+  padding-top: 10px;
+}
+.multipage .mltp{
+  margin: 10px;
+  border: 1px solid rgb(140, 208, 240);
+  background-color: #d5ebf1;
+  border-radius: 10px;
+}
+.multipage .mltp .page1img{
+width: 100%;
+height:50%;
+align-items: center;
+justify-content: center;
+display: flex;
+/* border: 1px solid red; */
+
+}
+.multipage .mltp .page1img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+justify-content: center;
+display: flex;
+/* border: 1px solid rgb(0, 238, 255); */
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+.multipage h2{
+  text-align: center;
+}
+.multipage h1{
+  color: rgb(112, 220, 250);
+}
+
+
+.multipage .mltp .mltbtn{
+  /* border: 1px solid red; */
+  width: 100%;
+ 
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+
+}
+.multipage .mltp button{
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgb(107, 107, 255);
+  border-radius: 10px;
+  color: white;
+  border: none;
+  transition:3.5s ease;
+  width: 40%;
+}
+.multipage .mltp button:hover{
+  background-color: rgb(163, 89, 89);
+  width: 100%;
+}
+.multipage .mltp p{
+  padding-top: 10px;
+}
+@media screen and (max-width: 768px){
+  .multipage .multipagetop{
+    display: block;
+  }
+  .multipage .multipagebottom{
+    display: block;
+  }
+ 
+}
+
+/* multipage end?? */
+.arcade{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5b7b7d5;
+  
+}
+.arcade .arcadeleft{
+  width: 50%;
+  /* border: 1px solid rgb(248, 129, 129); */
+  border-radius: 10px;
+  background-color: #f5b7b7d5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.arcade .arcadetopleft{
+/* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ margin: 10px 10px 0px 10px;
+ width: 80%;
+  /* background-color: #eccd91; */
+}
+.arcade .arcadebottomleft{
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px 10px 10px;
+  width: 80%;
+  /* background-color: #ecee79; */
+  /* width: 50%; */
+}
+
+.arcade .arcd{
+  width: 100%;
+  position: relative;
+  background-color: #d4d38c;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  margin: 10px;
+  opacity: 0.8;
+  /* border: 1px solid rgb(219, 151, 5); */
+  
+}
+
+
+
+
+.arcade .leftrightArc .top-bottomArc .arcd .arcimg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ /* border: 1px solid blue; */
+  z-index: -1;
+  border-radius:10px;
+}
+.arcade .leftrightArc .top-bottomArc .arcd .arcimg img{
+  border-radius:10px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.arcade .leftrightArc .top-bottomArc .arcd .blurimg{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  /* width: 100px; */
+  width: 100%;
+
+  height: 30vh;
+  background-color: #3b05ff5d;
+  border-radius:10px;
+  /* display: none; */
+  transition: 0.5s ease;
+ 
+}
+.arcade .leftrightArc .top-bottomArc .arcd:hover .blurimg{
+  width: 30%;
+}
+
+
+
+
+/* arcade right css */
+.arcade .arcaderight{
+  width: 50%;
+  
+  position: relative;
+ 
+}
+.arcade .arcaderight .rightarcimg{
+  width: 100%;
+  height: 80vh;
+  /* border: 1px solid red; */
+
+  
+}
+.arcade .arcaderight .arcontent{
+    background-color: blue;
+    top: -100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.8s ease;
+}
+.arcade .arcaderight:hover .arcontent{
+  top: -200px;
+}
+
+
+.arcade .arcaderight .rightarcimg img{
+  width: 100%;
+  /* height: 300px; */
+object-fit: cover;  
+border-radius: 10px;
+height: 100%;
+}
+
+/* border css for arcade divs */
+.arcade .arcadeleft .arcade1{
+  border-bottom: 2px solid blue;
+  border-right: 2px solid blue;
+}
+.arcade .arcadeleft .arcade2{
+  border-bottom: 2px solid blue;
+  border-left: 2px solid blue;
+}
+.arcade .arcade3{
+  border-top: 2px solid blue;
+  border-right: 2px solid blue;
+}
+.arcade .arcade4{
+  border-top: 2px solid blue;
+  border-left: 2px solid blue;
+}

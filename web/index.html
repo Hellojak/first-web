@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="slide.js"></script> -->
+  <!-- <script src="newslide.js"></script> -->
+</head>
+<div class="slide-container">
+  <div class="slides">
+    <img src="C:\Users\umasankar\Desktop\web\img\11.png" alt="" class="active">
+    
+    <img src="C:\Users\umasankar\Desktop\web\img\10.png" alt="">
+    
+    <img src="C:\Users\umasankar\Desktop\web\img\9.png" alt="">
+    <img src="C:\Users\umasankar\Desktop\web\img\8.png" alt="">
+
+  </div>
+  <div class="buttons">
+    <span class="next">&#10095;</span>
+    <span class="prev">&#10094;</span>
+
+  </div>
+  <div class="dotcontainer">
+    <div class="dot active" attr="0" ></div>
+    <div class="dot" attr="1"></div>
+    <div class="dot" attr="2"></div>
+    <div class="dot" attr="3"></div>
+  </div>
+</div>
+  
+<script>
+  let slideImages =document.querySelectorAll('img');// access the imag
+let next=document.querySelector('.next'); // access next button
+let prev=document.querySelector('.prev'); //access prev
+let dot=document.querySelector('.dot'); // access dots
+var counter=0;
+// code for next button
+next.addEventListener('click',slideNext);
+function slideNext(){
+    slideImages[counter].style.animation='next1 0.5s ease-in forwards';
+    if(counter>=slideImages.length-1){
+        counter=0;
+    }
+    else{
+        counter++;
+    }
+    slideImages[counter].style.animation='next2 0.5s ease-in forwards';
+}
+// code for next button
+prev.addEventListener('click',slidePrev);
+function slidePrev(){
+    slideImages[counter].style.animation='prev1 0.5s ease-in forwards';
+    if(counter==0){
+        counter=slideImages.length-1;
+    }
+    else{
+        counter--;
+    }
+    slideImages[counter].style.animation='prev2 0.5s ease-in forwards';
+}
+//code for dots
+
+</script>
+</body>
+
+</html>

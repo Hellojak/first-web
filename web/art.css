@@ -1,0 +1,82 @@
+
+body{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.navbars{
+    display: flex;
+    justify-content: space-around;
+    padding:1rem 1rem 0rem 1rem;
+    /* border: 1px solid red; */
+    background-color: rgb(250, 222, 248);
+    
+}
+.navbars img{
+    height: 80px;
+    width: 80px;
+    /* border: 3px solid orange; */
+    border-radius: 50%;
+}
+.navbars ul{
+display: flex;
+/* border: 1px solid blue; */
+margin-top: 1rem;
+}
+.navbars ul li{
+    list-style-type: none;
+    margin: 0 1rem;
+
+}
+.navbars .navright{
+    /* margin-top: 1rem; */
+    /* border: 1px solid blue; */
+    height: 0px;
+   
+}
+.navbars .navright button{
+    border: none;
+    background-color: orange;
+    width: 100%;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 30px;
+}
+.navbars button a{
+    color: white;
+
+}
+.navbars .toggleb{
+    display: none;
+    margin-top: 1rem;
+}
+.navbars span{
+    color: orange;
+}
+.navbars ul li a:hover{
+    color: orange;
+}
+.navbars .navright button:hover{
+    background-color: blue;
+}
+.navbars a{
+    text-decoration: none;
+}
+
+@media (max-width: 868px) {
+    .navbars .toggleb{
+        display: block;
+    }
+    .navbars .navright{
+        display: none;
+    }
+    .navbars ul{
+        display: none;
+    }
+    .navbars .toggleb a:hover body{
+        background-color: blue;
+    }
+}
